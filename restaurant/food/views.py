@@ -1,6 +1,8 @@
 from rest_framework.generics import ListAPIView
-from .serializers import FoodListSerializer
+
 from .models import Food
+from .serializers import FoodListSerializer
+
 
 class FoodListView(ListAPIView):
     serializer_class = FoodListSerializer
