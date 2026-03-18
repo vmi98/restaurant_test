@@ -1,0 +1,11 @@
+id,category_id,internal_code,code,name_ru,description_ru,is_vegan,is_special,cost,is_publish,additional
+1,1,100,1,Чай,Чай 100 гр,False,False,123.00,True,
+2,1,200,2,Кола,Кола,False,False,123.00,True,
+3,1,300,3,Спрайт,Спрайт,False,False,123.00,True,
+4,1,400,4,Байкал,Байкал,False,False,123.00,True,
+5,2,500,5,Круассан,Свежий круассан,False,False,200.00,True,
+6,2,600,6,Булочка,Сладкая булочка,False,False,150.00,False,
+7,3,700,7,Цезарь,Салат цезарь,False,True,350.00,False,
+8,3,800,8,Оливье,Салат оливье,False,False,300.00,False,
+9,4,900,9,Торт,Шоколадный торт,False,False,500.00,True,
+10,5,1000,10,Борщ,Борщ,False,False,250.00,False
