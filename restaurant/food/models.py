@@ -2,6 +2,14 @@ from django.db import models
 from model_utils.models import TimeStampedModel
 
 
+class FoodQuerySet(models.QuerySet):
+    def published(self):
+        return self.filter(is_publish=True)
+
+    def with_additional(self):
+        return self.prefetch_related('additional')
+
+
 class FoodCategory(TimeStampedModel):
     name_ru = models.CharField(verbose_name='Название на русском',
                                max_length=255, unique=True)
@@ -47,6 +55,8 @@ class Food(TimeStampedModel):
     additional = models.ManyToManyField('self', verbose_name='Дополнительные товары',
                                         symmetrical=False,
                                         related_name='additional_from', blank=True)
+
+    objects = FoodQuerySet.as_manager()
 
     def __str__(self):
         return self.name_ru
